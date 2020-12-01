@@ -1,0 +1,85 @@
+body{
+    background-color: #632432;
+    font-family: Arial;
+}
+.navbar {
+    height:  50px;
+}
+.container {
+    background-color: gray;
+    border-radius: 30px;
+    margin-top: 18px;
+    
+    font-size: 14px;
+}
+.form-group {
+    height: 55px;
+    
+    padding-top: 1px;
+    padding-bottom: -8px;
+    
+    line-height: 0px;
+}
+#img{
+    padding-top: 14px; 
+}
+ label{
+     
+    height: 2px;
+    text-align: center;
+    padding: 0px 2% 0px;
+    font-size: 14px;
+    text-align: left;
+}
+#bttn{
+    margin-bottom: 0px;
+    
+}
+.form-control{
+    height: 30px;
+    
+    font-size: 14px;
+    text-align: left;
+}
+
+
+#Titulo{
+    font-size: 18px;
+    color: white;
+}
+
+.nav-link:hover {
+    background-color: darkgrey;
+    
+}
+
+
+.dropdown-item:hover {
+    background-color: darkgrey;
+}
+
+.navbar-toggler:hover {
+    background-color: darkgrey;
+}
+
+.dropdown-menu {
+    background-color: #343a40;
+    
+}
+.btn{
+    font-size: 14px;
+}
+
+.dropdown-menu a{
+    color: white;
+    text-align: center;
+}
+
+
+.dropdown a{
+    color: white
+}
+
+#user{
+    left: -50px;
+}

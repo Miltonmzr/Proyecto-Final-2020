@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+        <link href="../CSS/Estilos.css" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container col-lg-3">
+            <div class="form-group text-center">
+                <p><strong> <a>Recuperar contraseña </a></strong></p>
+                
+            </div>
+            <form action="recuperar.jsp" method="post">
+                <div class="form-group">
+                    <label >Digite su usuario o e-mail</label>
+                    <input class="form-control" type="text" name="user" title="Introdusca usuario" placeholder="Usuario o e-mal" required>
+                </div>
+
+                <div class="form-group text-center">
+                    <input class="btn btn-danger "  type="submit" title="Presione para recuperar contraseña" value="Recuperar">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
