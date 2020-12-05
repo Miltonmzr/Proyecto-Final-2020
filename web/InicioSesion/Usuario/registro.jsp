@@ -21,41 +21,41 @@
 
     if (request.getParameter("user") == null) {
         String e = "Introdusca un usuario o alias";
-        response.sendRedirect("../Login/index.jsp?msj=" + e + "");
+        response.sendRedirect("Login/index.jsp?msj=" + e + "");
     } else {
         user = request.getParameter("user");
     }
 
     if (request.getParameter("e-mail") == null) {
         String e = "Introdusca correo electronico";
-        response.sendRedirect("../Login/index.jsp?msj=" + e + "");
+        response.sendRedirect("Login/index.jsp?msj=" + e + "");
     } else {
         mail = request.getParameter("e-mail");
     }
 
     if (request.getParameter("names") == null) {
         String e = "Introdusca su nombre(s)";
-        response.sendRedirect("../Login/index.jsp?msj=" + e + "");
+        response.sendRedirect("Login/index.jsp?msj=" + e + "");
     } else {
         names = request.getParameter("names");
     }
 
     if (request.getParameter("surnames") == null) {
         String e = "Introdusca sus apellidos";
-        response.sendRedirect("../Login/index.jsp?msj=" + e + "");
+        response.sendRedirect("Login/index.jsp?msj=" + e + "");
     } else {
         surnames = request.getParameter("surnames");
     }
 
     if (request.getParameter("pass1") == null || request.getParameter("pass2") == null) {
         String e = "Introdusca su clave de acceso y confirmela";
-        response.sendRedirect("../Login/index.jsp?msj=" + e + "");
+        response.sendRedirect("Login/index.jsp?msj=" + e + "");
     } else {
         pass1 = request.getParameter("pass1");
         pass2 = request.getParameter("pass2");
         if (!pass1.equals(pass2)) {
             String e = "Las contraseñas no coinciden";
-            response.sendRedirect("../Login/index.jsp?msj=" + e + "");
+            response.sendRedirect("Login/index.jsp?msj=" + e + "");
         }
     }
 
@@ -77,10 +77,10 @@
             String sql2 = "CALL sp_newUsuario('" + user + "','" + mail + "','" + names + "','" + surnames + "','" + Seguridad.md5(pass1) + "');";
             bd.abc(sql2);
             bd.cerrar();
-            response.sendRedirect("../Login/index.jsp?msj=" + m + "");
+            response.sendRedirect("Login/index.jsp?msj=" + m + "");
         } else {
             String e = "El " + user + " ya existe, si no recuerda su contraseña solicitela";
-            response.sendRedirect("../Login/index.jsp?msj=" + e + "");
+            response.sendRedirect("Login/index.jsp?msj=" + e + "");
         }
 
     } catch (SQLException e) {

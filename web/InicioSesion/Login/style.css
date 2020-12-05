@@ -26,7 +26,7 @@ input, button {
   overflow: hidden;
   position: relative;
   width: 900px;
-  height: 750px;
+  height: 770px;
   margin: 0 auto 100px;
   background: #fff;
 }
@@ -239,7 +239,8 @@ input {
   text-transform: uppercase;
 }
 
-.fb-btn {
+.fb-btn{
+    btn;
   border: 2px solid #d3dae9;
   color: #8fa1c7;
 }
@@ -288,4 +289,47 @@ input {
 .icon-link img {
   width: 100%;
   vertical-align: top;
+}
+
+img {
+	display: block;
+}
+img {
+	margin: 0 auto;
+	border-radius: 10px;
+}
+
+#logout p{
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    display: block;
+  width: 100%;
+  margin-top: 5px;
+  padding-bottom: 5px;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  text-align: center;
+  border: 2px solid #455a81;
+}
+
+#logout {
+        font-weight: bold;
+	margin-top: 10px;
+        border: 2px solid #455a81;
+}
+
+a{
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+p{
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.bienvenido{
+    font-family: 'Oleo Script Swash Caps', cursive;
+    font-size: 26px;
 }

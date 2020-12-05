@@ -16,7 +16,7 @@
     String user = "";
     if (request.getParameter("user") == null) {
         String e = "Introdusca un usuario o e-mail";
-        response.sendRedirect("../index.jsp?msj=" + e + "");
+        response.sendRedirect("../Login/index.jsp?msj=" + e + "");
     } else {
 
         MySQL bd = new MySQL();
@@ -26,16 +26,16 @@
             String sql = "CALL sp_getUsuario('" + user + "');";
             rs = bd.getStmt().executeQuery(sql);
             if (rs.next()) {
-                String token = Seguridad.md5(Herramientas.random(6));
+                //String token = Seguridad.md5(Herramientas.random(6));
                 String m = "Se envio un e-mail al correo que nos proporciono";
                 String cuerpo = "<h2>Recuperar clave de acceso</h2>";
-                cuerpo += "<p>Si usted no solicito el cambio de contraseña de click <a href='187.190.160.231/Sesiones/Token/fail.jsp?token=" + token + "'>Aqui </a></p>";
-                cuerpo += "<p>Para restaurar su cuenta de click <a href='187.190.160.231/Sesiones/Token/recovery.jsp?token=" + token + "&id=" + user + "'>Aqui </a></p>";
+                //cuerpo += "<p>Si usted no solicito el cambio de contraseña de click <a href='Token/fail.jsp?token=" + token + "'>Aqui </a></p>";
+                //cuerpo += "<p>Para restaurar su cuenta de click <a href='Token/recovery.jsp?token=" + token + "&id=" + user + "'>Aqui </a></p>";
                 JavaMail.enviarMail(rs.getString("correo"), "Recuperar clave", cuerpo);
-                response.sendRedirect("../index.jsp?msj=" + m + "");
+                response.sendRedirect("../Login/index.jsp?msj=" + m + "");
             } else {
                 String e = "El usuario o correo no se encuentran registrados";
-                response.sendRedirect("../index.jsp?msj=" + e + "");
+                response.sendRedirect("../Login/index.jsp?msj=" + e + "");
             }
             rs.close();
             bd.cerrar();

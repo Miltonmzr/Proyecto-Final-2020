@@ -15,7 +15,7 @@
     HttpSession sesion = request.getSession();
     if (sesion.getAttribute("client") == null) {
         String e = "Identifiquese por favor.";
-        response.sendRedirect("../index.jsp?msj=" + e + "");
+        response.sendRedirect("../Login/index.jsp?msj=" + e + "");
     }
 
     String id = (String) sesion.getAttribute("client");
@@ -50,7 +50,7 @@
     }
     if (administrador.getTipo() != 1) {
         String e = "Identifiquese como administrador";
-        response.sendRedirect("../index.jsp?msj=" + e + "");
+        response.sendRedirect("../Login/index.jsp?msj=" + e + "");
     }
 %>
 

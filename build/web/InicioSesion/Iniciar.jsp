@@ -16,12 +16,12 @@
 
     if (request.getParameter("user") == null) {
         String e = "Introdusca un usuario o correo";
-        response.sendRedirect("index.jsp?msj=" + e + "");
+        response.sendRedirect("Login/index.jsp?msj=" + e + "");
     } else {
         user = request.getParameter("user");
         if (request.getParameter("pass") == null) {
             String e = "Introdusca una clave de acceso";
-            response.sendRedirect("index.jsp?msj=" + e + "");
+            response.sendRedirect("Login/index.jsp?msj=" + e + "");
         } else {
             clave = request.getParameter("pass");
         }
@@ -47,11 +47,11 @@
                     response.sendRedirect("Cliente");
                 } else {
                     String e = "Error anormal en la logica del proyecto";
-                    response.sendRedirect("index.jsp?msj=" + e + "");
+                    response.sendRedirect("Login/index.jsp?msj=" + e + "");
                 }
             } else {
                 String e = "Verifique su usuario o contraseña";
-                response.sendRedirect("index.jsp?msj=" + e + "");
+                response.sendRedirect("Login/index.jsp?msj=" + e + "");
             }
         }
         bd.cerrar();

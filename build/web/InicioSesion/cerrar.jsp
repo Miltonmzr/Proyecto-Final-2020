@@ -12,5 +12,5 @@
     sesion.removeAttribute("names");
     sesion.invalidate();
     String m = "Sesion concluida exitosamente";
-    response.sendRedirect("index.jsp?msj="+m+"");
+    response.sendRedirect("Login/index.jsp?msj="+m+"");
 %>
